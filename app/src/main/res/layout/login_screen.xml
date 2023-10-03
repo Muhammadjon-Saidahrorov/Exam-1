@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/playIcon"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:background="@drawable/play"
+        android:backgroundTint="#7659FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Create New Account"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playIcon" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#FAFAFA"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text">
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="@color/black"
+            android:hint="Email" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="24dp"
+        android:backgroundTint="#FAFAFA"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card1">
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="@color/black"
+            android:hint="Password" />
+
+    </androidx.cardview.widget.CardView>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#7659FF"
+        app:layout_constraintBottom_toBottomOf="@id/textRemember"
+        app:layout_constraintEnd_toStartOf="@id/textRemember"
+        app:layout_constraintTop_toTopOf="@id/textRemember" />
+
+    <TextView
+        android:id="@+id/textRemember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:gravity="center"
+        android:text="Remember me"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signUpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="24dp"
+        android:background="@drawable/sign_up"
+        android:text="Sign up"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textRemember" />
+
+    <View
+        android:layout_width="80dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="16dp"
+        android:background="#3E3E3E"
+        android:text="or continue with"
+        app:layout_constraintBottom_toBottomOf="@id/textcontinue"
+        app:layout_constraintEnd_toStartOf="@id/textcontinue"
+        app:layout_constraintTop_toTopOf="@id/textcontinue" />
+
+    <TextView
+        android:id="@+id/textcontinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:gravity="center"
+        android:text="or continue with"
+        android:textColor="#3E3E3E"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signUpBtn" />
+
+    <View
+        android:layout_width="80dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:background="#3E3E3E"
+        android:text="or continue with"
+        app:layout_constraintBottom_toBottomOf="@id/textcontinue"
+        app:layout_constraintStart_toEndOf="@id/textcontinue"
+        app:layout_constraintTop_toTopOf="@id/textcontinue" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/facebook"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="24dp"
+        android:background="@drawable/btn"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="20dp"
+        android:src="@drawable/facebook"
+        app:layout_constraintEnd_toStartOf="@id/google"
+        app:layout_constraintTop_toBottomOf="@id/textcontinue" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/google"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="24dp"
+        android:background="@drawable/btn"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="20dp"
+        android:src="@drawable/google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textcontinue" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ios"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="24dp"
+        android:background="@drawable/btn"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="20dp"
+        android:src="@drawable/apple"
+        app:layout_constraintStart_toEndOf="@id/google"
+        app:layout_constraintTop_toBottomOf="@id/textcontinue" />
+
+    <TextView
+        android:id="@+id/already"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Already have an account?"
+        android:textColor="#3E3E3E"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/google" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:text="Sign in"
+        android:textColor="#6B54D6"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/already"
+        app:layout_constraintTop_toBottomOf="@id/google" />
+</androidx.constraintlayout.widget.ConstraintLayout>
